@@ -264,7 +264,7 @@
 .icon-x:hover,
 .icon-x:focus{
     fill:currentColor;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__title{
     width: 450px;
@@ -297,10 +297,12 @@
     border-radius: 4px;
     padding: 0px;
     padding-left: 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-info:hover,
 .modal-info:focus{
     border-color:var(--button-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon{
     position: absolute;
@@ -332,10 +334,12 @@
     height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .big-text:hover,
 .big-text:focus{
     border-color:var(--button-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .big-text::placeholder{
     font-size: 12px;
@@ -409,7 +413,10 @@
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
+    background-color: #FFFFFF;
     border-radius: 2px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .confirm-box:checked + .icon-confirm{
     border-color: #2196F3;
@@ -417,6 +424,8 @@
     background-image: url(../images/confirm-blue.svg);
     background-size:contain;
     background-origin: border-box;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Переваги-------------------------------------------------------*/
 .info{
