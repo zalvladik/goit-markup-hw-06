@@ -220,15 +220,69 @@
                     <svg class="social"><use href="./images/icons.svg#icon-linkedin"></use></svg></a></li>
         </ul>
             </div>
+        <div class="container__subscribe">
+                <h2 class="footer-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h2>
+                <form class="js-speaker-form">
+            <label class="subscribe__email">
+                <input type="email" class="footer__subscribe--text" name="mail" id="mail" placeholder="E-mail"/>
+            </label>
+                <button type="submit" class="footer__subscribe--button">Підписатися<svg class="subscribe__icon">
+                    <use href="./images/icons.svg#icon-telegram"></use></svg></button>
+                </form>
         </div>
     </footer>
     <div class="overlay is-hidden" data-modal>
         <div class="modal">
+        <section class="modal-container">
+            <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
             <button class="button-x" data-modal-close>
             <svg class="icon-x"><use href="./images/icons.svg#icon-x"></use></svg>
             </button>
+            
+        <form class="js-speaker-form">
+            <label class="info-container">
+                <span class="modal-text">Ім'я</span>
+                <input type="name" class="modal-info" name="name" autofocus/>
+                <svg class="modal-icon"><use href="./images/icons.svg#icon-name"></use></svg>
+            </label>
+            <label class="info-container">
+                <span class="modal-text">Телефон</span>
+                <input type="tel" class="modal-info" name="telephone"/>
+                <svg class="modal-icon"><use href="./images/icons.svg#icon-telephone"></use></svg>
+            </label>
+            <label class="info-container">
+                <span class="modal-text">Пошта</span>
+                <input type="email" class="modal-info" name="email"/>
+                <svg class="modal-icon"><use href="./images/icons.svg#icon-black-email"></use></svg>
+            </label>
+            
+        <label class="big-text-container">
+            <span class="modal-text">Коментар</span>
+            <textarea class="big-text" name="big-text" placeholder="Введіть текст" ></textarea>
+        </label>
+        <label class="confirm-container">
+            <input type="checkbox" value="confirm" name="confirm" class="confirm-box"/>
+            <span class="icon-confirm"></span>
+            <span class="confirm-text">Погоджуюся з розсилкою та приймаю <a href="#" class="confirm-link">Умови договору</a></span>   
+        </label> 
+        <button type="submit" class="button-submit">Відправити</button>
+    </form>
+        </section>
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script>
+        (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+
+                e.currentTarget.reset();
+            });
+        })();
+    </script>
 </body>
 </html>

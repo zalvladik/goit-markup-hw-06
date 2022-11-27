@@ -148,14 +148,7 @@
     height: 16px;
     fill: currentColor;
     margin-right: 10px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-tel:hover,
-.icon-tel:focus{
-    fill:var(--button-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /*hero-----------------------------------------------------------*/
 .hero {
     margin: auto;
@@ -218,6 +211,7 @@
 }
 .modal{
     position: absolute;
+    padding: 40px 0px;
     width: 528px;
     height: 581px;
     top:50%;
@@ -228,6 +222,10 @@
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+.modal-container{
+    width: 450px;
+    margin:auto;
 }
 .overlay.is-hidden > .modal{
     scale:0.6;
@@ -247,16 +245,11 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: #FFFFFF;
-    transform: scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #000000;
 }
 .button-x:hover,
 .button-x:focus{
-    transform: scale(1.1);
-    background-color: #2196F3;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color:var(--button-color);
 }
 .icon-x{
     position: absolute;
@@ -265,6 +258,165 @@
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+    fill:currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+}
+.icon-x:hover,
+.icon-x:focus{
+    fill:currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+}
+.modal__title{
+    width: 450px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom:30px;
+}
+.info-container{
+    display: block;
+    position: relative;
+    color:#212121;
+    margin-bottom:28px;
+    height: 40px;
+    
+}
+.info-container:hover,
+.info-container:focus{
+    color:var(--button-color);
+}
+.modal-info{
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 0px;
+    padding-left: 42px;
+}
+.modal-info:hover,
+.modal-info:focus{
+    border-color:var(--button-color);
+}
+.modal-icon{
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left:12px;
+    top:11px;
+    fill:currentColor;
+}
+.modal-text{
+    position: absolute;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+    left:0px;
+    top:-18px;
+}
+.big-text-container{
+    display: block;
+    position:relative;
+    margin-bottom: 20px;
+    height: 120px;
+}
+.big-text{
+    padding: 12px 16px;
+    resize: none;
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.big-text:hover,
+.big-text:focus{
+    border-color:var(--button-color);
+}
+.big-text::placeholder{
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.button-submit{
+    width: 200px;
+    height: 50px;
+    padding: 0px;
+    margin:0px auto;
+    text-align: center;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border:1px solid transparent;
+    border-radius: 4px; 
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    justify-content: center;
+    scale: 1;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-submit:hover,
+.button-submit:focus{
+    scale:1.05;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.confirm-container{
+    display: flex;
+    align-items: center;
+    width: 425px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.confirm-box{
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+.confirm-text{
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+.confirm-link{
+    text-decoration:underline;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color:var(--button-color);
+    margin-left: 5px;
+}
+.icon-confirm{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+}
+.confirm-box:checked + .icon-confirm{
+    border-color: #2196F3;
+    background-color: #2196F3;
+    background-image: url(../images/confirm-blue.svg);
+    background-size:contain;
+    background-origin: border-box;
 }
 /*Переваги-------------------------------------------------------*/
 .info{
@@ -572,6 +724,63 @@
 .footer-button:focus{
     background-color: var(--button-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container__subscribe{
+    margin-left:auto;
+}
+.container__subscribe > .js-speaker-form{
+    display: flex;
+}
+.subscribe__email{
+    display: block;
+}
+.footer__subscribe--text{
+    padding:0px;
+    padding-left:16px;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: #2F303A;
+    color: #FFF;
+    margin-right:12px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__subscribe--text:hover,
+.footer__subscribe--text:focus{
+    border-color: #2196F3;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__subscribe--button{
+    padding:0px 28px;
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border:0px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    justify-content: space-between;
+    scale: 1;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__subscribe--button:hover,
+.footer__subscribe--button:focus{
+    scale: 1.05;
+    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe__icon{
+    width: 24px;
+    height: 24px;
+    fill:#FFF;
 }
 /*Портфолио-------------------------------------------------------*/
 /*-------------------------------------------------------Портфолио*/
