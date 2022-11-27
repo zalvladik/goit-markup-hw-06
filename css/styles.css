@@ -310,7 +310,12 @@
     width: 18px;
     left:12px;
     top:11px;
-    fill:currentColor;
+    fill:#212121;
+}
+.modal-info:hover + .modal-icon,
+.modal-info:focus + .modal-icon{
+    fill:var(--button-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-text{
     position: absolute;
